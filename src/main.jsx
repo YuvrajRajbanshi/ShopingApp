@@ -6,6 +6,9 @@ import { createBrowserRouter, createRoutesFromElements, Route, Router, RouterPro
 import Home from './components/Pages/Home.jsx'
 import Men from './components/Pages/Men.jsx'
 import Women from './components/Pages/Women.jsx'
+import Kids from './components/Pages/Kids.jsx'
+import About from './components/Pages/About.jsx'
+import Contact from './components/Pages/Contact.jsx'
 
 // const router = createBrowserRouter([{
 
@@ -41,6 +44,9 @@ const router = createBrowserRouter(
       <Route path='home' element={<Home />} />
       <Route path='women' element={<Women />} />
       <Route path='men' element={<Men />} />
+      <Route path='kid' element={<Kids />} />
+      <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} />
     </Route>
   )
 )

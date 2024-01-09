@@ -6,6 +6,9 @@ import { Outlet } from "react-router-dom"
 import Women from './components/Pages/Women'
 import Men from './components/Pages/Men'
 import Footer from './footer/Footer'
+import Kids from './components/Pages/Kids'
+import About from './components/Pages/About'
+import Contact from './components/Pages/Contact'
 
 function App() {
 
@@ -18,6 +21,9 @@ function App() {
         <Home />
         <Women />
         <Men />
+        <Kids />
+        <About />
+        <Contact />
       </Outlet>
       <Footer />
 
