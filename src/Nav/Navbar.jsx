@@ -13,10 +13,10 @@ const Navbar = () => {
 
 
         <>
-            <div className="bg-gray-400 overflow-hidden" >
+            <div className="bg-gray-400 overflow-hidden  z-10" >
                 <RxHamburgerMenu onClick={() => setHumburger(!humburger)} className={` fixed top-5 right-8 text-2xl lg:hidden cursor-pointer`} />
 
-                <div className=" lg:flex lg:justify-between lg:items-center  m-9  x  ">
+                <div className=" lg:flex lg:justify-between lg:items-center z-10 m-9 ">
                     <img
                         src="../../images/logo.png"
                         alt="logo is just logo"
@@ -34,7 +34,7 @@ const Navbar = () => {
                                     `${isActive ? "text-red-400" : "text-white"
                                     } transition duration-500 ease-in-out hover:text-red-400`
                                 }
-                                to="/"
+                                to="/home"
                             >
                                 Home
                             </NavLink>{" "}
@@ -101,19 +101,19 @@ const Navbar = () => {
                         </li>
 
                         <div className=" relative">
-                            <IoSearchOutline className=" absolute top-1 text-gray-100 text-2xl " />
+                            <IoSearchOutline className=" px-1 absolute top-1 text-gray-100 text-2xl " />
                             <input
                                 type="text"
                                 placeholder="search here"
-                                className=" text-black bg-gray-400 focus:outline-none  pl-7
-                        p-1 rounded-sm
-
+                                className=" text-black bg-gray-400 focus:outline-none  pl-7 border-2 border-color-gray-100
+                   py-1 px-3 rounded-md
+                      
                         "
                             />
                         </div>
                     </nav>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     );
 };

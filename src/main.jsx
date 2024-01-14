@@ -9,6 +9,7 @@ import Women from './components/Pages/Women.jsx'
 import Kids from './components/Pages/Kids.jsx'
 import About from './components/Pages/About.jsx'
 import Contact from './components/Pages/Contact.jsx'
+import ErrorPage from './components/Pages/ErrorPage.jsx'
 
 // const router = createBrowserRouter([{
 
@@ -41,12 +42,13 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />} >
 
-      <Route path='home' element={<Home />} />
+      <Route path='/home' element={<Home />} />
       <Route path='women' element={<Women />} />
       <Route path='men' element={<Men />} />
       <Route path='kid' element={<Kids />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='*' element={<ErrorPage />} />
     </Route>
   )
 )
