@@ -2,32 +2,32 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx"
+import { ImCross } from "react-icons/im";
+
 
 const Navbar = () => {
 
-    const humburgerHandle = () => {
-        console.log("Hello world")
-    }
 
+    const [humburger, setHumburger] = useState(false)
     return (
 
 
         <>
-            <div>
-                <RxHamburgerMenu onClick={() => humburgerHandle()} className=" fixed top-5 right-8 text-2xl " />
+            <div className="bg-gray-400 overflow-hidden" >
+                <RxHamburgerMenu onClick={() => setHumburger(!humburger)} className={` fixed top-5 right-8 text-2xl lg:hidden cursor-pointer`} />
 
-                <div className=" flex justify-between m-9  items-center sm:flex flex-col">
+                <div className=" lg:flex lg:justify-between lg:items-center  m-9  x  ">
                     <img
                         src="../../images/logo.png"
                         alt="logo is just logo"
                         className=" w-[80px] h-[80px]"
                     />
 
-                    <nav className=" flex items-center justify-center  gap-7
-
-                    sm:flex flex-col
+                    <nav className={`lg:flex lg:items-center lg:justify-center  lg:space-x-10  lg:space-y-0 space-y-5
+                   ${humburger ? "translate-x-0 && bg-gray-400 py-2 " : `translate-x-[110%] h-0  lg:translate-x-0 transition duration-500 ease-in-out `} transition duration-500 ease-in-out
+                            
                     
-                    ">
+                      `}>
                         <li className=" list-none font-semibold ">
                             <NavLink
                                 className={({ isActive }) =>
